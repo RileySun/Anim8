@@ -1,2 +1,5 @@
 # Anim8
-My personal CSS3 Animation Library
+
+A CSS3 Animation Library I Created For Use in Web Development
+
+Is A Work In Progress
