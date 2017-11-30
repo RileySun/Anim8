@@ -1,22 +1,21 @@
 function clearAnim8() {
 	var display = document.getElementById("Anim8");
-	for (var i = 0; i < display.classList.length; i++) {
-		if (i > 0) {
-			display.classList.remove(display.classList[i]);
-		};
+	for (var i = 1; i < display.classList.length; i++) {
+		display.classList.remove(display.classList[i]);
 	};
 };
 
 function addAnim8(animation) {
 	clearAnim8();
 	var display = document.getElementById("Anim8");
-	display.classList.add(animation);
+	window.setTimeout(function() {display.classList.add(animation);}, 5);
 };
 
 function loadAnim8() {
 	document.getElementById("Grow").addEventListener("click", function() {addAnim8("Anim8-Grow")}, false);
 	document.getElementById("Spin").addEventListener("click", function() {addAnim8("Anim8-Spin")}, false);
 	document.getElementById("Wobble-Spin").addEventListener("click", function() {addAnim8("Anim8-Wobble-Spin")}, false);
+	document.getElementById("FadeIn").addEventListener("click", function() {addAnim8("Anim8-FadeIn")}, false);
 	document.getElementById("FadeIn-Left").addEventListener("click", function() {addAnim8("Anim8-FadeIn-Left")}, false);
 	document.getElementById("FadeIn-Right").addEventListener("click", function() {addAnim8("Anim8-FadeIn-Right")}, false);
 	document.getElementById("FadeIn-Up").addEventListener("click", function() {addAnim8("Anim8-FadeIn-Up")}, false);
